@@ -1,5 +1,10 @@
+0.12 - Tue Jun  6 23:49:21 PDT 2006
+ - 0.8.1 Official Release of SeleniumRC
+   - fixes --port and --timeout command line processing
+
 0.10 - Sat Jun  3 13:40:22 PDT 2006
  - 0.8.0 Official Release of SeleniumRC
+ - fixed path problems under cygwin (Thanks, Kevin Jones!)
 
 0.02 - Working Release - Sun May 28 18:39:51 PDT 2006
  - java is a runtime, not build time dependency, so remove
