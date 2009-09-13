@@ -4,11 +4,13 @@ use warnings;
 use Test::More tests => 5;
 use lib 'lib';
 
+
 my $command;
 BEGIN {
     # mock system() for testing
     package Alien::SeleniumRC;
     use subs 'system';
+
     package main;
     *Alien::SeleniumRC::system = sub { $command = shift };
 
@@ -22,7 +24,7 @@ Jar_location: {
 }
 
 my $java = 'java';
-$java = 'sudo /usr/libexec/StartupItemContext `which java`' if $^O eq 'darwin';
+#$java = 'sudo /usr/libexec/StartupItemContext `which java`' if $^O eq 'darwin';
 Starting_server: {
     Alien::SeleniumRC::start();
     like $command, qr($java -jar \S+/+selenium-server\.jar\s*$);
