@@ -2,7 +2,7 @@ package Alien::SeleniumRC;
 use strict;
 use warnings;
 
-our $VERSION = '2.80';
+our $VERSION = '2.81';
 our $VERBOSE = 1;
 
 use 5.006;
@@ -17,7 +17,8 @@ sub start {
     }
 
     print "Running $cmd\n" if $VERBOSE;
-    system($cmd);
+    my $ret = system($cmd);
+    die "Failed to run '$cmd': $!" if $ret == -1;
     print "Selenium server has finished\n" if $VERBOSE;
 }
 
@@ -74,7 +75,8 @@ performs automated tasks in JavaScript.
 =head2 C<start>
 
 This method launches the Selenium Server bundled in this package.
-This call will block until the server is killed.
+This call will block until the server is killed. The method will throw
+an exception with C<die> if the C<system> call returns an error.
 
 The first argument passed to start() will be passed to
 selenium-server.jar as a command line argument.
