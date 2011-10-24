@@ -1,3 +1,6 @@
+2.90 - Mon Oct 24 22:04:00 AEDT 2011
+ - Update to Selenium 2.9.0
+
 2.81 - Wed Oct 12 22:14:00 AEDT 2011
  - start() throws excetion if system() fails
 
