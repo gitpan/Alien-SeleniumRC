@@ -1,10 +1,5 @@
-Changes
-MANIFEST
-MANIFEST.SKIP
-SIGNATURE
-Makefile.PL
-README
 bin/selenium-rc
+Changes
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
@@ -19,6 +14,11 @@ inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Alien/SeleniumRC.pm
 lib/Alien/SeleniumRC/selenium-server.jar
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+README
+SIGNATURE
 t/script.t
 t/seleniumrc.t
 t/signature.t
